@@ -2077,7 +2077,7 @@ struct Event {
     liveEventDEPRECATED @8 :List(LiveEventData);
     model @9 :ModelData;
     features @10 :CalibrationFeatures;
-    sensorEvents @11 :List(SensorEventData);
+    sensorEventsDEPRECATED @11 :List(SensorEventData);
     health @12 :HealthData;
     radarState @13 :RadarState;
     liveUIDEPRECATED @14 :LiveUI;
@@ -2143,5 +2143,17 @@ struct Event {
     modelV2 @75 :ModelDataV2;
     frontEncodeIdx @76 :EncodeIndex; # driver facing camera
     wideEncodeIdx @77 :EncodeIndex;
+
+    # Sensors
+    sensorAccelerometer1 @78 :SensorEventData;
+    sensorAccelerometer2 @79 :SensorEventData;
+    sensorGyroCalibrated1 @80 :SensorEventData;
+    sensorGyroUncalibrated1 @81 :SensorEventData;
+    sensorGyroTemperature1 @82 :SensorEventData;
+    sensorGyroUnCalibrated2 @83 :SensorEventData;
+    sensorGyroTemperature2 @84 :SensorEventData;
+    sensorMagnetometerCalibrated1 @85 :SensorEventData;
+    sensorMagnetometerUncalibrated1 @86 :SensorEventData;
+    sensorLight @87 :SensorEventData;
   }
 }

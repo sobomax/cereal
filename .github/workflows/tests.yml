@@ -1,6 +1,6 @@
 name: tests
 
-on: [push, pull_request]
+on: [push, pull_request, workflow_dispatch]
 
 env:
   RUN: docker run --shm-size 1G --name cereal cereal /bin/sh -c

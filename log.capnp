@@ -19,6 +19,13 @@ struct Map(Key, Value) {
   }
 }
 
+struct PValue {
+  union {
+    txt @0 :Text;
+    bin @1 :Data;
+  }
+}
+
 struct InitData {
   kernelArgs @0 :List(Text);
   kernelVersion @15 :Text;
@@ -42,7 +49,7 @@ struct InitData {
 
   dirty @9 :Bool;
   passive @12 :Bool;
-  params @17 :Map(Text, Text);
+  params @17 :Map(Text, PValue);
 
   enum DeviceType {
     unknown @0;
